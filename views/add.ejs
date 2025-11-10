@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Books</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #e3f0f5;
+      text-align: center;
+      padding: 20px;
+    }
+    .main {
+      height: 400px;
+      width: 600px;
+      background-color: white;
+      margin: 0 auto;
+      border-radius: 20px;
+      padding: 20px;
+    }
+    .new {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      background-color: #0066cc;
+      height: 40px;
+      width: 300px;
+      margin: 10px auto 20px;
+      text-align: center;
+    }
+    h2 {
+      color: aliceblue;
+      padding-top: 10px;
+    }
+    input {
+      height: 40px;
+      width: 90%;
+      border-radius: 12px;
+      border: none;
+      margin-top: 10px;
+      padding-left: 10px;
+    }
+    input:hover {
+      border: 2px solid;
+      background-color: #c8d5e1;
+    }
+    .addbook {
+      margin-top: 20px;
+      height: 40px;
+      width: 120px;
+      border-radius: 15px;
+      border: none;
+      background-color: #0066cc;
+      color: white;
+    }
+    .addbook:hover {
+      cursor: pointer;
+      background-color: #0052a3;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="new">
+    <h2>Add New Book</h2>
+  </div>
+
+  <div class="main">
+    <form action="/library/add" method="POST">
+      <input type="text" name="id" placeholder="Enter book ID" required><br>
+      <input type="text" name="title" placeholder="Book title" required><br>
+      <input type="text" name="author" placeholder="Enter book author" required><br>
+      <input type="number" name="available_copies" placeholder="Number of copies" required><br>
+      <button type="submit" class="addbook">Add Book</button>
+    </form>
+
+    <br>
+    <a href="/library"><button class="addbook">Back</button></a>
+  </div>
+</body>
+</html>
